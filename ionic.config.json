@@ -1,0 +1,8 @@
+{
+  "name": "InicialUTNFRA",
+  "app_id": "015757e9",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
