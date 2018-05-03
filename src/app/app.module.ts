@@ -10,6 +10,9 @@ import { ListPage } from '../pages/list/list';
 import { SalaMensajesPage } from '../pages/sala-mensajes/sala-mensajes';
 import { IngresoPage } from '../pages/ingreso/ingreso';
 
+import {AngularFireModule} from 'angularfire2';
+import {AngularFirestoreModule} from 'angularfire2/firestore';
+import { environment } from '../environments/environment';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -25,6 +28,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(environment.firebase),// <=
+    AngularFirestoreModule //<=
   ],
   bootstrap: [IonicApp],
   entryComponents: [
