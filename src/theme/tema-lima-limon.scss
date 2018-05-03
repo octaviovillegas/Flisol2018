@@ -1,0 +1,27 @@
+.tema-lima-limon{
+	
+			ion-content {
+				@include linear-gradient(left,$lemon-twist);
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				background-size: cover;
+			}
+
+			ion-list-header
+			{
+				@include linear-gradient(right,$limalimon);
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				background-size: cover;
+			}
+			ion-item {
+				@include linear-gradient(left,$limalimon);
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				background-size: cover;
+			}
+			
+			
+		
+
+}

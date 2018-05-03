@@ -1,0 +1,9 @@
+.menu-principal{
+	ion-list button 
+	{
+		@include linear-gradient(left,$bora-bora);
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+	}
+}

@@ -1,9 +1,30 @@
 <ion-content padding>
-    <ion-list>
-        <ion-item *ngFor="let chat of ListadoDeChatsObservable  | async;let i = index ">
-            {{i}}-{{chat.usuario }} dice: {{chat.mensaje }} <sup> {{chat.tiempo }} </sup>
-        </ion-item>
-    </ion-list>
-</ion-content>
+
+ <ion-list>
+  <ion-card *ngFor=" let chat of ListadoDeChatsObservable  | async; let i = index ">
+      <ion-note item-start>
+            {{chat.usuario}}:
+      </ion-note>     
+     
+          {{chat.mensaje }} 
+      
+      <ion-row>   
+          <ion-col center text-center>
+            <ion-note>
+              {{chat.tiempo | tiempoDesdeAhora }}
+            </ion-note>
+          </ion-col>
+      </ion-row>
+ </ion-card>
+</ion-list>
+
+
+<ion-fab *ngIf="!mostrarSpinner"  right bottom>
+      <button ion-fab color="UTNFRACmp" (click)="nuevoMensaje($event)">
+           <ion-icon ios="ios-chatbubbles" md="md-chatbubbles"></ion-icon>
+      </button>
+</ion-fab>
 
 <ion-spinner *ngIf="mostrarSpinner" name="dots"></ion-spinner>
+
+</ion-content>

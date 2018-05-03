@@ -1,0 +1,32 @@
+.tema-sandro{
+	
+	ion-content {
+		@include linear-gradient(left,$rosa);
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+	}
+
+	ion-list-header{
+		@include linear-gradient(right,$pinky);
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+	}
+	ion-item {
+		@include linear-gradient(left,$pinky);
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+	}
+	
+	ion-card-content{
+		@include linear-gradient(right,$pinky);
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+
+	}
+
+	
+}

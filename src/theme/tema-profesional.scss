@@ -1,0 +1,30 @@
+.tema-profesional{	
+
+	ion-content {
+		@include linear-gradient(left,$rose-colored-lenses);
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+	}
+
+	ion-list-header{
+		@include linear-gradient(right,$frozen);
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+	}
+	ion-item {
+		@include linear-gradient(left,$frozen);
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+	}
+	
+	ion-card-content{
+		@include linear-gradient(right,$frozen);
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+
+	}
+}

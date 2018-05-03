@@ -14,3 +14,36 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+ ion-content {
+    @include linear-gradient(left,$green-and-blue);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+  }
+
+ion-list-header
+{
+    @include linear-gradient(right,$visions-of-grandeur);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+  }
+  ion-item {
+    @include linear-gradient(left,$visions-of-grandeur);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+  }
+ ion-list button 
+  {
+    @include linear-gradient(right,$green-and-blue);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+  }
+  
+  h1{
+      font-size: 2.0rem;
+
+  }

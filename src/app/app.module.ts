@@ -17,8 +17,11 @@ import { environment } from '../environments/environment';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+ import { TiempoDesdeAhoraPipe} from '../pipes/tiempo-desde-ahora/tiempo-desde-ahora';
+
 @NgModule({
   declarations: [
+  TiempoDesdeAhoraPipe,
     MyApp,
     HomePage,
     ListPage,

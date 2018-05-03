@@ -319,6 +319,20 @@ let prompt= this.VentanaAlert.create({
 prompt.present();
 }
 ```
+$. Agrego el boton para craer el mensaje.
+En el page.HTML:
+Creo el botón nuevoMensaje.
+```    
+<ion-fab *ngIf="!mostrarSpinner"  right bottom>
+      <button ion-fab color="UTNFRACmp" (click)="nuevoMensaje($event)">
+           <ion-icon ios="ios-chatbubbles" md="md-chatbubbles"></ion-icon>
+      </button>
+</ion-fab>
+
+```
+
+
+
 
  ## Habilitar la persistencia de datos. 
 
@@ -453,7 +467,8 @@ en este archivo podemos crear, modificar o importar varibles y funciones de  scs
   https://ionicframework.com/docs/theming/overriding-ionic-variables/
 ```
 
-modificamos los valores de algunas
+modificamos los valores de algunas en /src/theme/variables.scss,
+ubicando esta lineas despues de definir los colores. osea por debajo de la linea de la definicion del $color.
 ```
 $text-color:         blue !default;
 $link-color:         color($colors, light) !default;
@@ -513,7 +528,64 @@ Modificamos...
 o así en el archivo scss de cualquier componente
 ```
 tupágina
-  {
+{
   background: color($colors, UTNFRACmp, base);
 }
+```
+
+5- importamos los archivos con funcion y tipo de gradientes ,desde:
+```
+https://github.com/subinsebastian/uigradients-scss
+```
+
+los siguientes archivos
+```
+├──gradient.scss
+├──gradient-mixins.scss
+```
+
+Solo importamos en variables.scss
+```
+@import "ionic.globals";
+@import './gradient-mixins';//<==este
+```
+
+
+en app.scss:
+(También podemos poner reglas CSS)
+Usamos la función linear-gradient() para darle colos a los elementos
+```
+ion-content {
+        @include linear-gradient(left,$green-and-blue);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+      }
+
+      ion-list-header
+      {
+        @include linear-gradient(right,$visions-of-grandeur);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+      }
+      ion-item {
+        @include linear-gradient(left,$visions-of-grandeur);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+      }
+      ion-list button 
+      {
+        @include linear-gradient(right,$green-and-blue);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+      }
+
+      tambien podemos poner reglas 
+        h1{
+            font-size: 2.0rem;
+
+        }
 ```
