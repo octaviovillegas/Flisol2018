@@ -52,10 +52,12 @@ $app-direction: ltr;
 	    contrast: white
 	  )
   );
-
+   $toolbar-background: transparent !default;
+/*
 	$text-color:         blue !default;
 	$link-color:         color($colors, light) !default;
 	$toolbar-background: transparent !default;
+	*/
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here

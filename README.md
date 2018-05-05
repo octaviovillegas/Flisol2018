@@ -538,7 +538,7 @@ tupágina
 https://github.com/subinsebastian/uigradients-scss
 ```
 
-los siguientes archivos
+los siguientes archivos los colocamos en el mismo lugar que esta el archivo variables.scss, en /src/theme/
 ```
 ├──gradient.scss
 ├──gradient-mixins.scss
@@ -589,3 +589,14 @@ ion-content {
 
         }
 ```
+
+
+
+## Crear un componente para el menú.
+
+
+Creamos el nuevo componente para tener un menu estandarizado para toda la aplicación
+```
+ionic g component NavegadorUtn --no-module
+```
+

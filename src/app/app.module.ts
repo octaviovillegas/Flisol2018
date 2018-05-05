@@ -17,7 +17,9 @@ import { environment } from '../environments/environment';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
- import { TiempoDesdeAhoraPipe} from '../pipes/tiempo-desde-ahora/tiempo-desde-ahora';
+import { TiempoDesdeAhoraPipe} from '../pipes/tiempo-desde-ahora/tiempo-desde-ahora';
+
+import {NavegadorUtnComponent} from '../components/navegador-utn/navegador-utn';
 
 @NgModule({
   declarations: [
@@ -26,9 +28,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     SalaMensajesPage,
-    IngresoPage
+    IngresoPage,
+    NavegadorUtnComponent
+  ],
+  exports:[
+    NavegadorUtnComponent
   ],
   imports: [
+
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(environment.firebase),// <=
@@ -40,7 +47,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage ,
     SalaMensajesPage,
-    IngresoPage
+    IngresoPage,
+    NavegadorUtnComponent
   ],
   providers: [
     StatusBar,

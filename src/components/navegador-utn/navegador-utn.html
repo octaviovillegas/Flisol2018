@@ -1,0 +1,12 @@
+  <ion-navbar transparent>
+    <button ion-button menuToggle="left" start>
+      <ion-icon name="walk"></ion-icon>
+    </button>
+      <button menuToggle *ngIf="mostrarToggle">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title >{{titulo}}</ion-title>
+     <button ion-button menuToggle="right" end>
+      <ion-icon name="contact"></ion-icon>
+    </button>
+  </ion-navbar>

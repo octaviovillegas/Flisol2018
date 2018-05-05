@@ -7,13 +7,29 @@
 
   <ion-content>
     <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+      <button menuClose ion-item *ngFor="let p of pagesApp" (click)="openPage(p)">
         {{p.title}}
       </button>
     </ion-list>
   </ion-content>
 
 </ion-menu>
+
+<ion-menu [content]="content" side="right" id="menuPersonal" class="tema-lima-limon tema-menu-principal">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Personales</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button ion-item  menuClose="menu2" detail-none *ngFor="let p of pagesUser" (click)="openPage(p)">
+         {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
 
 <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
